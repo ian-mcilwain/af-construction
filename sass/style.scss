@@ -1,0 +1,395 @@
+/*
+* Theme Name: Lindsay's Theme
+* Theme URI: www.ianmcilwain.com;
+* Description: 
+* Version: 1.0
+* Author: Ian McIlwain	
+* Author URI: http://www.ianmcilwain.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
+
+// option 1 for header
+
+// header {
+// 	width: 100%;
+// 	max-width: 1400px;
+	
+// 	.headerImage {
+// 		float: left;
+// 		position: absolute;
+// 		.homeLink {
+// 			img {
+// 				width: 200px;
+// 				margin: 15px;
+// 			}
+// 		}
+// 	}
+
+// 	.headerNav {
+// 		width: 100%;
+// 		float: left;
+// 		ul {
+// 			text-align: right;
+// 			margin-top: 70px;
+// 			margin-bottom: 60px;
+// 			margin-right: 30px;
+// 			list-style: none;
+// 			padding-left: 0;
+// 			li {
+// 				font-family: 'Lato', sans-serif;
+// 				display: inline;
+// 				color: darkgrey;
+// 				.linkVisible {
+// 					color: black;
+// 				}
+// 				a {
+// 					color: darkgrey;
+// 				}
+
+// 			}
+// 		}
+// 	}
+// } // header ends here
+
+
+// option 2 for header
+
+
+header {
+	width: 100%;
+	max-width: 1400px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	
+	.headerImage {
+		// float: left;
+		// position: absolute;
+		.homeLink {
+			img {
+				width: 280px;
+				margin: 15px;
+				margin-top: 30px;
+				transform: rotate(10.5deg);
+			}
+		}
+	}
+
+	.headerNav {
+		// margin-top: -20px;
+		// width: 100%;
+		// float: left;
+		z-index: 999999;
+		ul {
+			// text-align: right;
+			margin-top: -35px;
+			// margin-bottom: 60px;
+			// margin-right: 30px;
+			// list-style: none;
+			padding-left: 0;
+			li {
+				font-family: 'Lato', sans-serif;
+				display: inline;
+				color: darkgrey;
+				.linkVisible {
+					color: black;
+				}
+				a {
+					color: darkgrey;
+				}
+
+			}
+		}
+	}
+} // header ends here
+
+// option 3 for header 
+
+// header {
+// 	width: 100%;
+// 	max-width: 1400px;
+	
+// 	.headerImage {
+// 		float: left;
+// 		position: absolute;
+// 		.homeLink {
+// 			img {
+// 				width: 200px;
+// 				margin: 15px;
+// 			}
+// 		}
+// 	}
+
+// 	.headerNav {
+// 		width: 100%;
+// 		float: left;
+// 		ul {
+// 			text-align: right;
+// 			margin-top: 70px;
+// 			margin-bottom: 60px;
+// 			margin-right: 30px;
+// 			list-style: none;
+// 			padding-left: 0;
+// 			li {
+// 				font-family: 'Lato', sans-serif;
+// 				display: inline;
+// 				color: darkgrey;
+// 				.linkVisible {
+// 					color: black;
+// 				}
+// 				a {
+// 					color: darkgrey;
+// 				}
+
+// 			}
+// 		}
+// 	}
+// } // header ends here
+
+
+.heroImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999999999999999;
+	background: white;
+	opacity: 100%;
+	// transition: all 2s;
+	img {
+		max-width: 70%;
+		transition: all 2.4599999999999999999s;
+	}
+}
+
+.work {
+	// margin-top: 40px;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	h1 {
+		display: none;
+	}
+	.grid {
+		.grid-sizer {
+			width: 33%;
+		}
+
+		.gutter-sizer {
+			width: .5%;
+		}
+
+			.grid-item {
+				width: 33%;
+				img {
+					padding: 5px;
+					max-width: 100%;
+					width: 100%;
+					height: auto;
+				}
+			}
+	}
+}
+.fadeToWhite {
+	opacity: 0;
+}
+.hiddenHero {
+	display: none;
+	// opacity: 0;
+}
+
+.lightbox {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999999999999999;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 1s;
+	overflow: scroll;
+
+	.lightboxImage {
+		max-height: 90% !important;
+		width: auto !important;
+
+	}
+}
+
+.aboutContainer {
+	width: 60%;
+	a {
+		color: black;
+		// text-decoration: bold;
+		font-weight: bold;
+		transition: all 0.5s;
+	}
+	a:hover {
+		color: darkgray;
+	}
+	.contactInfo {
+		width: 100%;
+		text-align: center;
+		margin-top: 80px;
+		.email {
+			float: left;
+		}
+
+		.phoneNumber {
+			float: right;
+		}
+	}
+}
+
+
+
+
+@media all and (max-width: 940px) {
+	.work {
+	// margin-top: 40px;
+	padding-left: 5px;
+	padding-right: 5px;
+	.grid {
+		.grid-sizer {
+			width: 49%;
+		}
+
+		.gutter-sizer {
+			width: .5%;
+		}
+
+			.grid-item {
+				width: 49%;
+				img {
+					padding: 5px;
+				}
+			}
+	}
+}
+
+	.aboutContainer {
+		width: 90%;
+		a {
+			color: black;
+			// text-decoration: bold;
+			font-weight: bold;
+			transition: all 0.5s;
+		}
+		a:hover {
+			color: darkgray;
+		}
+		.contactInfo {
+			width: 100%;
+			text-align: center;
+			margin-top: 80px;
+			.email {
+				float: none;
+
+			}
+
+			.phoneNumber {
+				float: none;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 500px) {
+	.work {
+	// margin-top: 40px;
+	padding-left: 5px;
+	padding-right: 5px;
+	.grid {
+		.grid-sizer {
+			width: 99%;
+		}
+
+		.gutter-sizer {
+			width: .5%;
+		}
+
+			.grid-item {
+				width: 99%;
+				img {
+					padding: 5px;
+				}
+			}
+	}
+}
+
+	.aboutContainer {
+		width: 90%;
+		a {
+			color: black;
+			// text-decoration: bold;
+			font-weight: bold;
+			transition: all 0.5s;
+		}
+		a:hover {
+			color: darkgray;
+		}
+		.contactInfo {
+			width: 100%;
+			text-align: center;
+			margin-top: 20px;
+			.email {
+				float: none;
+
+			}
+
+			.phoneNumber {
+				float: none;
+			}
+		}
+	}
+
+}
+
+
+
+// header .headerImage .homeLink img {
+// 	width: 130px;
+// }
+
