@@ -28,14 +28,14 @@ body {
 }
 
 .container {
-	max-width: 1200px;
 	margin: 0 auto;
+	max-width: 1200px;
 }
 
 .content {
 	float: left;
-	width: 65%;
 	margin-right: 5%;
+	width: 65%;
 }
 
 .full {
@@ -45,34 +45,34 @@ body {
 // option 1 for header
 
 // header {
-// 	width: 100%;
 // 	max-width: 1400px;
+// 	width: 100%;
 	
 // 	.headerImage {
 // 		float: left;
 // 		position: absolute;
 // 		.homeLink {
 // 			img {
-// 				width: 200px;
 // 				margin: 15px;
+// 				width: 200px;
 // 			}
 // 		}
 // 	}
 
 // 	.headerNav {
-// 		width: 100%;
 // 		float: left;
+// 		width: 100%;
 // 		ul {
-// 			text-align: right;
-// 			margin-top: 70px;
+// 			list-style: none;
 // 			margin-bottom: 60px;
 // 			margin-right: 30px;
-// 			list-style: none;
+// 			margin-top: 70px;
 // 			padding-left: 0;
+// 			text-align: right;
 // 			li {
-// 				font-family: 'Lato', sans-serif;
-// 				display: inline;
 // 				color: darkgrey;
+// 				display: inline;
+// 				font-family: 'Lato', sans-serif;
 // 				.linkVisible {
 // 					color: black;
 // 				}
@@ -90,42 +90,42 @@ body {
 
 
 header {
-	width: 100%;
-	max-width: 1400px;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
 	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1400px;
+	width: 100%;
 	
 	.headerImage {
 		// float: left;
 		// position: absolute;
 		.homeLink {
 			img {
-				width: 280px;
-				margin: 15px;
 				margin-top: 30px;
+				margin: 15px;
 				transform: rotate(10.5deg);
+				width: 280px;
 			}
 		}
 	}
 
 	.headerNav {
+		// float: left;
 		// margin-top: -20px;
 		// width: 100%;
-		// float: left;
 		z-index: 999999;
 		ul {
-			// text-align: right;
-			margin-top: -35px;
+			// list-style: none;
 			// margin-bottom: 60px;
 			// margin-right: 30px;
-			// list-style: none;
+			// text-align: right;
+			margin-top: -35px;
 			padding-left: 0;
 			li {
-				font-family: 'Lato', sans-serif;
-				display: inline;
 				color: darkgrey;
+				display: inline;
+				font-family: 'Lato', sans-serif;
 				.linkVisible {
 					color: black;
 				}
@@ -141,34 +141,34 @@ header {
 // option 3 for header 
 
 // header {
-// 	width: 100%;
 // 	max-width: 1400px;
+// 	width: 100%;
 	
 // 	.headerImage {
 // 		float: left;
 // 		position: absolute;
 // 		.homeLink {
 // 			img {
-// 				width: 200px;
 // 				margin: 15px;
+// 				width: 200px;
 // 			}
 // 		}
 // 	}
 
 // 	.headerNav {
-// 		width: 100%;
 // 		float: left;
+// 		width: 100%;
 // 		ul {
-// 			text-align: right;
-// 			margin-top: 70px;
+// 			list-style: none;
 // 			margin-bottom: 60px;
 // 			margin-right: 30px;
-// 			list-style: none;
+// 			margin-top: 70px;
 // 			padding-left: 0;
+// 			text-align: right;
 // 			li {
-// 				font-family: 'Lato', sans-serif;
-// 				display: inline;
 // 				color: darkgrey;
+// 				display: inline;
+// 				font-family: 'Lato', sans-serif;
 // 				.linkVisible {
 // 					color: black;
 // 				}
@@ -183,18 +183,18 @@ header {
 
 
 .heroImage {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	left:0;
-	right: 0;
-	bottom: 0;
-	z-index: 9999999999999999;
-	background: white;
-	opacity: 100%;
 	// transition: all 2s;
+	align-items: center;
+	background: white;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left:0;
+	opacity: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999999999999999;
 	img {
 		max-width: 70%;
 		transition: all 2.4599999999999999999s;
@@ -221,10 +221,10 @@ header {
 			.grid-item {
 				width: 33%;
 				img {
-					padding: 5px;
-					max-width: 100%;
-					width: 100%;
 					height: auto;
+					max-width: 100%;
+					padding: 5px;
+					width: 100%;
 				}
 			}
 	}
@@ -238,18 +238,18 @@ header {
 }
 
 .lightbox {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 999999999999999;
-	background-color: white;
-	display: flex;
 	align-items: center;
+	background-color: white;
+	bottom: 0;
+	display: flex;
 	justify-content: center;
-	transition: all 1s;
+	left: 0;
 	overflow: scroll;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: all 1s;
+	z-index: 999999999999999;
 
 	.lightboxImage {
 		max-height: 90% !important;
@@ -261,8 +261,8 @@ header {
 .aboutContainer {
 	width: 60%;
 	a {
-		color: black;
 		// text-decoration: bold;
+		color: black;
 		font-weight: bold;
 		transition: all 0.5s;
 	}
@@ -270,9 +270,9 @@ header {
 		color: darkgray;
 	}
 	.contactInfo {
-		width: 100%;
-		text-align: center;
 		margin-top: 80px;
+		text-align: center;
+		width: 100%;
 		.email {
 			float: left;
 		}
@@ -312,8 +312,8 @@ header {
 	.aboutContainer {
 		width: 90%;
 		a {
-			color: black;
 			// text-decoration: bold;
+			color: black;
 			font-weight: bold;
 			transition: all 0.5s;
 		}
@@ -321,9 +321,9 @@ header {
 			color: darkgray;
 		}
 		.contactInfo {
-			width: 100%;
-			text-align: center;
 			margin-top: 80px;
+			text-align: center;
+			width: 100%;
 			.email {
 				float: none;
 
@@ -362,8 +362,8 @@ header {
 	.aboutContainer {
 		width: 90%;
 		a {
-			color: black;
 			// text-decoration: bold;
+			color: black;
 			font-weight: bold;
 			transition: all 0.5s;
 		}
@@ -371,9 +371,9 @@ header {
 			color: darkgray;
 		}
 		.contactInfo {
-			width: 100%;
-			text-align: center;
 			margin-top: 20px;
+			text-align: center;
+			width: 100%;
 			.email {
 				float: none;
 
