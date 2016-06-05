@@ -42,52 +42,6 @@ body {
 	width: 100%;
 }
 
-// option 1 for header
-
-// header {
-// 	max-width: 1400px;
-// 	width: 100%;
-	
-// 	.headerImage {
-// 		float: left;
-// 		position: absolute;
-// 		.homeLink {
-// 			img {
-// 				margin: 15px;
-// 				width: 200px;
-// 			}
-// 		}
-// 	}
-
-// 	.headerNav {
-// 		float: left;
-// 		width: 100%;
-// 		ul {
-// 			list-style: none;
-// 			margin-bottom: 60px;
-// 			margin-right: 30px;
-// 			margin-top: 70px;
-// 			padding-left: 0;
-// 			text-align: right;
-// 			li {
-// 				color: darkgrey;
-// 				display: inline;
-// 				font-family: 'Lato', sans-serif;
-// 				.linkVisible {
-// 					color: black;
-// 				}
-// 				a {
-// 					color: darkgrey;
-// 				}
-
-// 			}
-// 		}
-// 	}
-// } // header ends here
-
-
-// option 2 for header
-
 
 header {
 	align-items: center;
@@ -138,49 +92,6 @@ header {
 	}
 } // header ends here
 
-// option 3 for header 
-
-// header {
-// 	max-width: 1400px;
-// 	width: 100%;
-	
-// 	.headerImage {
-// 		float: left;
-// 		position: absolute;
-// 		.homeLink {
-// 			img {
-// 				margin: 15px;
-// 				width: 200px;
-// 			}
-// 		}
-// 	}
-
-// 	.headerNav {
-// 		float: left;
-// 		width: 100%;
-// 		ul {
-// 			list-style: none;
-// 			margin-bottom: 60px;
-// 			margin-right: 30px;
-// 			margin-top: 70px;
-// 			padding-left: 0;
-// 			text-align: right;
-// 			li {
-// 				color: darkgrey;
-// 				display: inline;
-// 				font-family: 'Lato', sans-serif;
-// 				.linkVisible {
-// 					color: black;
-// 				}
-// 				a {
-// 					color: darkgrey;
-// 				}
-
-// 			}
-// 		}
-// 	}
-// } // header ends here
-
 
 .heroImage {
 	// transition: all 2s;
@@ -226,6 +137,23 @@ header {
 					padding: 5px;
 					width: 100%;
 				}
+				.caption {
+					// visibility: hidden;
+					display: none;
+				}
+
+				.exit {
+					// visibility: hidden;
+					display: none;
+					position: absolute;
+					top: 10px;
+					right: 10px;
+
+					h2{
+						margin: 0;
+					}
+
+				}
 			}
 	}
 }
@@ -242,9 +170,10 @@ header {
 	background-color: white;
 	bottom: 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	left: 0;
-	overflow: scroll;
+	// overflow: scroll;
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -254,7 +183,16 @@ header {
 	.lightboxImage {
 		max-height: 90% !important;
 		width: auto !important;
+		// visibility: visible !important;
+		
+	}
 
+	.lightboxCaption {
+		display: inline-flex !important;
+	}
+
+	.lightboxExit {
+		display: block !important;
 	}
 }
 

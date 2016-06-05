@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Template Name: Home Page
+	Template Name: Recipe Development
 */
 
 get_header();  ?>
@@ -21,7 +21,7 @@ $projectTerms = wp_get_post_terms( $post->ID, 'project_type' );
 
 $featuredQuery = new WP_Query( 
 array( 
-    'post_type' => 'project', 
+    'post_type' => 'recipe-development', 
     ) 
     );  ?>
     <?php if ( $featuredQuery->have_posts() ) : ?>

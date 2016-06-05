@@ -26,7 +26,9 @@
 
 <div class="headerNav">
   <ul>
-    <li><a href="http://www.lindsayguscott.com/work/" id="workLink">WORK</a></li>
+    <li><a href="http://www.lindsayguscott.com/work/" id="workLink">DEVELOP</a></li>
+    <li>|</li    
+    <li><a href="http://www.lindsayguscott.com/work/" id="workLink">STYLE</a></li>
     <li>|</li>
     <li><a href="http://www.lindsayguscott.com/about/" id="aboutLink">ABOUT</a></li>
   </ul>

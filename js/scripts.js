@@ -36,7 +36,11 @@ $(function(){
 	console.log(url);
 
 	var urlValue = url.indexOf('about');
-	console.log(urlValue);
+	var urlStyleValue = url.indexOf('food');
+	var urlRecipeValue = url.indexOf('recipe');
+	console.log("About Page Value: " + urlValue);
+	console.log("Food Styling Page Value: " + urlStyleValue);
+	console.log("Recipe Development Value: " + urlRecipeValue);
 
 	if (urlValue > -1) {
 		$('#aboutLink').addClass('linkVisible');
@@ -75,19 +79,23 @@ $(window).resize(function() {
 })
 
 $('.gridItemLink').click(function(e) {
-	var winWidth = $(window).width();
-	var winHeight = $(window).height();
-	var step1 = $(this).html();
-	var step1 = step1.trim();
+	// var winWidth = $(window).width();
+	// var winHeight = $(window).height();
+	// var step1 = $(this).html();
+	// var step1 = step1.trim();
 
-	console.log(step1);
-	e.preventDefault();
+	// console.log(step1);
+	// e.preventDefault();
 	$(this).toggleClass('lightbox');
+	console.log("THIS IS THE HTML: " + $(this).html());
+	$(this).children().removeAttr('width');
+	$(this).children().removeAttr('height');
+	$(this).children(".size-full").toggleClass('lightboxImage');
+	$(this).children(".caption").toggleClass('lightboxCaption')
+	$(this).children(".exit").toggleClass('lightboxExit')
+})
 
-	// $('.lightbox').css({
-	// 	width: winWidth,
-	// 	height: winHeight
-	// })
-
-	$(this).children().toggleClass('lightboxImage');
+$(".fakeExit").click(function(e) {
+	e.preventDefault()
+	console.log("exiting");
 })
