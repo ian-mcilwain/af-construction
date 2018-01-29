@@ -10,6 +10,9 @@
   <?php // Load our CSS ?>
   <link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
 
   <?php wp_head(); ?>
 </head>
@@ -20,18 +23,8 @@
 <header class="clearfix">
 <div class="headerImage">
  <a href="<?php echo home_url(); ?>" class="homeLink">
- <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lindsayLogo.png" alt="">
+ AF Construction
  </a>
-</div>
-
-<div class="headerNav">
-  <ul>
-    <li><a href="http://www.lindsayguscott.com/work/" id="workLink">DEVELOP</a></li>
-    <li>|</li    
-    <li><a href="http://www.lindsayguscott.com/work/" id="workLink">STYLE</a></li>
-    <li>|</li>
-    <li><a href="http://www.lindsayguscott.com/about/" id="aboutLink">ABOUT</a></li>
-  </ul>
 </div>
 </header><!--/.header-->
 

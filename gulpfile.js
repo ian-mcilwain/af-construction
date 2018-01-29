@@ -13,7 +13,7 @@ var gulp   = require('gulp'),
 
 gulp.task('bs', function() {
 	browserSync.init({
-		proxy: 'http://localhost:8888/lindsayGuscott'
+		proxy: 'http://localhost:8888/af-construction'
 	});
 });
 
@@ -37,8 +37,10 @@ gulp.task('scripts', function () {
 		.pipe(plumber({
 		  errorHandler: notify.onError("Error: <%= error.message %>")
 		}))
+		.pipe(sourcemaps.init())
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./js'))
 		.pipe(reload({stream:true}));
 });

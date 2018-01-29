@@ -9,15 +9,13 @@ get_header();  ?>
 </div>
 
 <div class="work">
-<h1>Lindsay Guscott Food Stylist</h1>
+<h1>h1</h1>
 
 <div class="grid">
 <div class="grid-sizer"></div>
 <div class="gutter-sizer"></div>
 <?php
-
 // $projectTerms = wp_get_post_terms( $post->ID, 'project_type' ); 
-
 $featuredQuery = new WP_Query( 
 array( 
     'post_type' => 'project', 
@@ -25,14 +23,14 @@ array(
     );  ?>
     <?php if ( $featuredQuery->have_posts() ) : ?>
         <?php while ($featuredQuery->have_posts()) : $featuredQuery->the_post(); ?>
-          <div class="grid-item typeRecipe">
+          <div class="grid-item">
             <div class="gridItemLink">
             <?php the_post_thumbnail('full'); ?>
             <div class="caption">
             <?php the_content() ?>
             </div>
             <div class="exit">
-                <h2><a class="fakeExit" href="">X</a></h2>
+                <h2><a class="fakeExit" href="">&#215;</a></h2>
             </div>
             </div>
           </div>

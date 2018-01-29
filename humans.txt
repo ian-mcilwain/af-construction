@@ -3,13 +3,13 @@
 
 
 /* TEAM */
-  <your title>: <your name>
+  <your title>: SalesHub
   Site:
   Twitter:
   Location:
 
 /* THANKS */
-  WordPress starter theme from HackerYou - http://hackeryou.com
+  WordPress Theme from SalesHub
 
 /* SITE */
   Standards: HTML5, CSS3
