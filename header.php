@@ -8,11 +8,12 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
   <?php // Load our CSS ?>
-  <link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  
 
   <?php wp_head(); ?>
 </head>
@@ -21,11 +22,26 @@
 <body <?php body_class(); ?>>
 
 <header class="clearfix">
-<div class="headerImage">
- <a href="<?php echo home_url(); ?>" class="homeLink">
- AF Construction
- </a>
-</div>
+  <div class="container">
+  <div class="logo">
+    <a href="<?php echo home_url(); ?>" class="homeLink">
+      <img src="<?php the_field('company_logo'); ?>" alt="">
+    </a> 
+  </div>
+  <div class="nav">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#ourWork">Our Work</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="phoneNumber">
+    <a href="tel:9057291077"><i class="fa fa-phone"></i> (905) 729-1077</a>
+  </div>
+  </div>
 </header><!--/.header-->
 
 
