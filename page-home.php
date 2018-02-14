@@ -54,7 +54,7 @@ get_header();  ?>
         </div>
         </div>
     </div>  <!-- services ends -->  
-    <div class="ourWork">
+    <div class="ourWork" id="ourWork">
         <div class="container">
             <h2 class="title">Our Work</h2>
 <div class="grid"> <!-- our work starts      -->

@@ -1,47 +1,29 @@
 <?php
 
 /*
-	Template Name: work
+	Template Name: Privacy Policy
 */
+
 get_header();  ?>
-<div class="heroImage">
-<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lindsayLogo.png" alt="" id="lindsayLogo">
-</div>
-
-<div class="work">
-<h1>h1</h1>
-
-<div class="grid">
-<div class="grid-sizer"></div>
-<div class="gutter-sizer"></div>
-<?php
-// $projectTerms = wp_get_post_terms( $post->ID, 'project_type' ); 
-$featuredQuery = new WP_Query( 
-array( 
-    'post_type' => 'project', 
-    ) 
-    );  ?>
-    <?php if ( $featuredQuery->have_posts() ) : ?>
-        <?php while ($featuredQuery->have_posts()) : $featuredQuery->the_post(); ?>
-          <div class="grid-item">
-            <div class="gridItemLink">
-            <?php the_post_thumbnail('full'); ?>
-            <div class="caption">
-            <?php the_content() ?>
+<div class="main">
+    <div class="hero" id="home" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>') ">
+        <div class="heroInner">
+            <div class="container">
+                <h1>Terms of Use and <br> Privacy Policy</h1>
             </div>
-            <div class="exit">
-                <h2><a class="fakeExit" href="">&#215;</a></h2>
-            </div>
-            </div>
-          </div>
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-<?php else:  ?>
-<?php endif; ?>
+        </div>
+    </div> <!-- hero ends -->
+    <div class="privacyPolicy">
+        <div class="container">
+            <?php // Start the loop ?>
+            <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-</div> <!-- grid ends here -->
+                <?php the_content(); ?>
 
-
+            <?php endwhile; // end the loop?>
+        </div>
+    </div>
+    
 </div> <!-- /.main -->
-
 <?php get_footer(); ?>
+

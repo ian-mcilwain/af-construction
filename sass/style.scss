@@ -38,6 +38,7 @@ body {
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 0 5%;
+	overflow: hidden;
 }
 
 
@@ -91,12 +92,14 @@ header {
 } 
 
 .hero {
-	height: 600px;
+	// height: 600px;
 	background-size: cover;
 	background-position: 20%;
 	.heroInner {
 		height: 100%;
 		background-color: rgba(0,0,0,0.4);
+		padding-top: 120px;
+		padding-bottom: 60px;
 		.container {
 			height: 100%;
 			display: flex;
@@ -131,7 +134,7 @@ header {
 .services {
 	// margin-top: 60px;
 	padding-top: 60px;
-	background-position: 20% 40%;
+	background-position: 20% 100%;
 	padding-bottom: 60px;
 	.container {
 		text-align: center;
@@ -146,7 +149,8 @@ header {
 			position: absolute;
 			z-index: 1;
 			opacity: .05;
-			left: 24%;
+			left: -50%;
+			right: -50%;
 			top: -50px;
 		}
 		p {
@@ -202,7 +206,8 @@ header {
 				position: absolute;
 				z-index: 1;
 				opacity: .05;
-				left: 35%;
+				left: -50%;
+				right: -50%;
 				top: -50px;
 			}
 		.grid {
@@ -255,6 +260,10 @@ header {
 						background-color: rgba(0,0,0,0.3);
 						opacity: 0;
 						transition: all 0.5s;
+						p	{
+							text-align: center;
+							padding: 20px;
+						}
 					}
 				}
 				a:hover .caption {
@@ -268,6 +277,7 @@ header {
 
 .clients .container {
 	text-align: center;
+	padding-bottom: 60px;
 	h2.title {
 				font-size: 48px;
 				position: relative;
@@ -281,7 +291,8 @@ header {
 		position: absolute;
 		z-index: 1;
 		opacity: .05;
-		left: 28%;
+		left: -50%;
+		right: -50%;
 		top: -50px;
 	}
 	p {
@@ -317,12 +328,13 @@ header {
 	background-color: #f7f7f7;
 	.container {
 		display: flex;
+		flex-wrap: wrap;
 		.leftSide, .rightSide {
 			width: 50%;
 		}
 		.leftSide {
 			background-size: cover;
-			background-position: center;
+			background-position: top;
 		}
 
 		.rightSide {
@@ -344,7 +356,8 @@ header {
 				position: absolute;
 				z-index: 1;
 				opacity: .05;
-				left: 14%;
+				left: -50%;
+				right: -50%;
 				top: -50px;
 			}
 			p {
@@ -376,7 +389,8 @@ header {
 			position: absolute;
 			z-index: 1;
 			opacity: .05;
-			left: 26%;
+			left: -50%;
+			right: -50%;
 			top: -50px;
 		}
 		p {
@@ -485,3 +499,142 @@ header {
 		}
 	}
 }
+
+footer {
+	background-color: $red;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		.column {
+			width: 25%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.logo {
+				width: 200px;
+			}
+			ul {
+				padding-left: 0;
+				li {
+					list-style: none;
+					a {
+						color: white;
+					}
+
+				}
+			}
+			.socialLinks {
+				ul {
+					display: flex;
+					li {
+						a {
+						color: $red;
+						// border-radius: 50%;
+						// background-color: white;
+						display: block;
+						transition: all 0.5s;
+						i {
+							font-size: 16px;
+							background-color: white;
+							border-radius: 50%;
+							// transition: all 0.5s;
+							width: 30px;
+							height: 30px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+						}
+						a:hover {
+							color: white;
+							i {
+								background-color: $red;
+								border: 2px solid white;
+							}
+						}
+				}
+				}
+			}
+		}
+		.copyright {
+			width: 100%;
+			p {
+				color: white;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1000px) {
+	header .container .logo {
+		width: 180px;
+	}
+ }
+
+ @media (max-width: 920px) {
+	header .container .nav {
+		display: none;
+	}
+ }
+
+  @media (max-width: 800px) {
+	.ourWork .container .grid .grid-item, .ourWork .container .grid .grid-sizer{
+		width: 100%;
+	}
+
+	.ourWork .container .grid .grid-item.double {
+		width: 100%;
+	}
+	.ourWork .container .grid .grid-item.doubleHeight {
+		height: 250px;
+	}
+
+	h2.title {
+		margin-bottom: 20px !important;
+	}
+
+	h2.title::after {
+		display: none !important;
+	}
+
+	.aboutUs .container {
+		.leftSide, .rightSide {
+			width: 100%;
+		}
+		.leftSide {
+			height: 400px;
+		}
+	}
+	.aboutUs .container, .contactUs .container .addressForm {
+		.leftSide, .rightSide {
+			width: 100%;
+		}
+	}
+	footer .container .column {
+		width: 50%;
+	}
+ }
+
+ @media (max-width: 600px) {
+	 .contactUs .container .addressForm .leftSide {
+		 flex-wrap: wrap;
+		 .column {
+			 width: 100%;
+		 }
+	 } 
+ }
+
+ @media (max-width: 480px) {
+	 .clients .container .clientSlider .slide.slick-current {
+			opacity: 1;
+			// padding: 0;
+			img {
+				width: 50%
+			}
+		}
+ }

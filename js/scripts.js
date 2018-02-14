@@ -33,7 +33,18 @@ app.servicesSlider = function () {
 		autoplay: true,
 		autoplaySpeed: 3000,
 		arrows: true,
-		dots: true
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '0',
+					slidesToShow: 1
+				}
+			}
+		]
 	  });
 }
 
